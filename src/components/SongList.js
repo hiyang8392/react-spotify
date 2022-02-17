@@ -126,7 +126,7 @@ const StyledSection = styled.section`
       }
 
       .song-title {
-        width: 65%;
+        width: 60%;
       }
 
       .song-album {
@@ -138,7 +138,7 @@ const StyledSection = styled.section`
       }
 
       .song-time {
-        width: 10%;
+        width: 15%;
       }
     }
   }
