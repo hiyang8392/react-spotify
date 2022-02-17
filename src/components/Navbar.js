@@ -60,11 +60,20 @@ const Nav = styled.nav`
   }
 
   @media (max-width: 500px) {
-      svg,
-      .banner {
-        display: none;
-      }
+    padding: 20px 5px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
+
+    span,
+    .banner
+     {
+      display: none;
+    }
+  }
 `;
 
 const Navbar = () => {

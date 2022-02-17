@@ -109,7 +109,15 @@ const StyledSection = styled.section`
   @media (max-width: 500px) {
     .banner {
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
+
+      .cover {
+        margin-bottom: 20px;
+      }
+
+      .info .title {
+        font-size: 20px;
+      }
     }
 
     .song-list {
@@ -118,11 +126,11 @@ const StyledSection = styled.section`
       }
 
       .song-title {
-        width: 40%;
+        width: 65%;
       }
 
       .song-album {
-        width: 45%;
+        display: none;
       }
 
       .song-collection {
@@ -130,7 +138,7 @@ const StyledSection = styled.section`
       }
 
       .song-time {
-        display: none;
+        width: 10%;
       }
     }
   }
