@@ -8,6 +8,11 @@ const StyledControl = styled.div`
   display: flex;
   margin-bottom: 5px;
 
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
   .prev,
   .next,
   .playing {

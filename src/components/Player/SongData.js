@@ -41,6 +41,10 @@ const StyledControl = styled.div`
       font-size: 11px;
     }
   }
+
+  @media (max-width: 500px) {
+    width: 20vw;
+  }
 `;
 
 const SongData = () => {
