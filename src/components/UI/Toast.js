@@ -18,6 +18,10 @@ const StyledToast = styled.div`
 		opacity: 1;
 		visibility: visible;
   }
+
+  @media (max-width: 500px) {
+    left: calc(100vw - 75%);
+  }
 `;
 
 const Toast = () => {

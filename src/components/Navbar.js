@@ -58,6 +58,13 @@ const Nav = styled.nav`
     height: 1px;
     min-height: 1px;
   }
+
+  @media (max-width: 500px) {
+      svg,
+      .banner {
+        display: none;
+      }
+    }
 `;
 
 const Navbar = () => {

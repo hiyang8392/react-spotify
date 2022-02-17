@@ -15,6 +15,10 @@ const StyledControl = styled.div`
     height: 16px;
     margin-right: 5px;
   }
+
+  @media (max-width: 500px) {
+    display: none;
+  }
 `;
 
 const VolumeControl = () => {

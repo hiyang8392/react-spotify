@@ -15,6 +15,10 @@ const StyledControl = styled.div`
       width: 52px;
       height: 52px;
     }
+
+    @media (max-width: 500px) {
+      display: none;
+    }
   }
 
   .info {

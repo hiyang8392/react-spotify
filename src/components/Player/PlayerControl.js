@@ -27,6 +27,7 @@ const StyledControl = styled.div`
   .playing {
     margin: 0 50px;
   }
+
 `;
 
 const PlayerControl = () => {

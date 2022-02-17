@@ -34,7 +34,6 @@ const StyledFooter = styled.footer`
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    /* height: 60px; */
   }
 `;
 

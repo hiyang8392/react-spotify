@@ -103,6 +103,16 @@ const SongLi = styled.li`
       }
     }
   }
+
+  @media (max-width: 500px) {
+    .song-title .album {
+      display: none;
+    }
+
+    .song-hash .playing-btn {
+      opacity: 1;
+    }
+  }
 `;
 
 const ADD_COLLECTION_MESSAGE = '已新增到你的音樂庫';

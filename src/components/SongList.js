@@ -49,6 +49,7 @@ const StyledSection = styled.section`
         color: #b3b3b3;
 
         .play-btn {
+          color: #000;
           padding: 5px 20px;
           margin-left: 10px;
           border: 0;
@@ -102,6 +103,35 @@ const StyledSection = styled.section`
       color: #b3b3b3;
       height: 100%;
       padding: 0 16px 10px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .banner {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .song-list {
+      .song-hash {
+        width: 15%;
+      }
+
+      .song-title {
+        width: 40%;
+      }
+
+      .song-album {
+        width: 45%;
+      }
+
+      .song-collection {
+        width: 10%;
+      }
+
+      .song-time {
+        display: none;
+      }
     }
   }
 `;
@@ -189,7 +219,7 @@ const SongList = (props) => {
           <div className="text">{listDesc}</div>
           <div className="create-info">
             <span>{createInfo}</span>
-            <button className="play-btn" onClick={handleTogglePlaying}>PLAY</button>
+            <button className="play-btn" onClick={handleTogglePlaying}>播放</button>
           </div>
         </div>
       </div>

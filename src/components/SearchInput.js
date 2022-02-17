@@ -39,7 +39,7 @@ const SearchInput = () => {
       const keyword = searchInput ? searchInput : key;
       dispatch(searchActions.searchData(keyword));
       if (keyword) {
-        history.replace(`/search?key=${keyword}`);  
+        history.replace(`/search?key=${keyword}`);
       }
     }, 300);
 
