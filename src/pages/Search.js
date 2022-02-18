@@ -20,6 +20,17 @@ const StyledSearch = styled.div`
     flex-wrap: wrap;
     margin: 10px 0;
   }
+
+  @media (max-width: 500px) {
+    h2 {
+      font-size: 20px;
+    }
+
+    .items {
+      flex-wrap: initial;
+      overflow-x: scroll;
+    }
+  }
 `;
 
 const Search = () => {

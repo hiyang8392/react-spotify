@@ -14,7 +14,13 @@ const Section = styled.section`
   h2 {
     font-size: 24px;
     margin-bottom: 16px;
-  }  
+  }
+
+  @media (max-width: 500px) {
+    h2 {
+      font-size: 20px;
+    }
+  }
 `;
 
 const Home = () => {
