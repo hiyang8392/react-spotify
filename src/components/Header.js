@@ -9,6 +9,7 @@ const StyledHeader = styled.div`
   top: 0;
   padding: 10px 25px 0;
   align-items: center;
+  z-index: 10000;
   background-color: #121212;
   height: 80px;
 
