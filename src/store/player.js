@@ -1,10 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { displayTime } from "../helpers";
 
+const volumeValue = localStorage.getItem('volumeValue')
+  ? parseFloat(localStorage.getItem('volumeValue'))
+  : 0.50;
+
 const initPlayer = {
   isPlaying: false,
   progressPercent: 0,
-  volume: 0.5,
+  volume: volumeValue,
   duration: 0,
   startTime: '00:00',
   endTime: '00:00',
@@ -53,7 +57,9 @@ const player = createSlice({
       state.progressPercent = updateProgressPercent(action.payload, state.duration);
     },
     updateVolume(state, action) {
-      state.volume = action.payload / 100;
+      const updatedVolume = action.payload / 100;
+      state.volume = updatedVolume;
+      localStorage.setItem('volumeValue', updatedVolume);
     },
     playNextSong(state) {
       const songs = state.songs;

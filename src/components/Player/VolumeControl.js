@@ -39,7 +39,7 @@ const VolumeControl = () => {
   return (
     <StyledControl>
       <button className="volume-btn">{volumeIcon}</button>
-      <input type="range" min="0" max="100" className="volume" onChange={handleUpdateVolume} />
+      <input type="range" min="0" max="100" className="volume" onChange={handleUpdateVolume} value={volume * 100} />
     </StyledControl>
   );
 };
