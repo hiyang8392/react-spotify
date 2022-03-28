@@ -34,6 +34,13 @@ const StyledFooter = styled.footer`
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+
+    .react-player {
+      position: absolute;
+      top: 0;
+      z-index: -9999;
+      visibility: hidden;
+    }
   }
 `;
 
@@ -48,28 +55,34 @@ const Player = () => {
   const songData = playerState.songData;
 
   const handleSeekTo = (time) => {
-    songRef.current.seekTo(time);
-    dispatch(playerActions.updatePlayerSecond(time));
+    if (songData.id) {
+      songRef.current.seekTo(time);
+      dispatch(playerActions.updatePlayerSecond(time));
+    }
   };
+
+  const playerUrl = songData.id
+    ? `${YOUTUBE_URL}${songData.id}`
+    : `${YOUTUBE_URL}oUFJJNQGwhk`;
 
   return (
     <StyledFooter>
       <SongData />
       <div className="player-body">
         <ReactPlayer
+          className="react-player"
           ref={songRef}
-          key={`${YOUTUBE_URL}${songData.id}`}
-          url={`${YOUTUBE_URL}${songData.id}`}
+          url={playerUrl}
           playing={isPlaying}
-          width="0"
-          height="0"
           volume={volume}
           muted={volume === 0 ? true : false}
           onDuration={(e) => {
-            dispatch(playerActions.getDuration(e));
+            if (songData.id) {
+              dispatch(playerActions.getDuration(e));
+            }
           }}
           onProgress={(e) => {
-            if (isPlaying) {
+            if (songData.id) {
               dispatch(playerActions.updatePlayerSecond(e.playedSeconds));
             }
           }}
