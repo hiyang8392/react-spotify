@@ -11,7 +11,6 @@ const StyledSearchBar = styled.div`
     padding: 6px 15px;
     border: 0;
     border-radius: 500px;
-    width: 100%;
     height: 30px;
     text-overflow: ellipsis;
     color: #000;
@@ -50,7 +49,7 @@ const SearchInput = () => {
 
   return (
     <StyledSearchBar>
-      <input name="search" placeholder="Search..." value={searchInput} onChange={handleSearchInput}/>
+      <input name="search" placeholder="想聽什麼?" value={searchInput} onChange={handleSearchInput}/>
     </StyledSearchBar>
   );
 };

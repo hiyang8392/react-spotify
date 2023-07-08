@@ -104,7 +104,7 @@ const SongLi = styled.li`
     }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 768px) {
     .song-title .album {
       display: none;
     }

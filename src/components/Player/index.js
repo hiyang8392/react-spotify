@@ -10,7 +10,7 @@ import VolumeControl from "./VolumeControl";
 
 const StyledFooter = styled.footer`
   position: fixed;
-  display: flex;
+  display: ${(props) => (props.songData ? "flex" : "none")};
   justify-content: space-between;
   align-items: center;
   bottom: 0;
@@ -66,7 +66,7 @@ const Player = () => {
     : `${YOUTUBE_URL}oUFJJNQGwhk`;
 
   return (
-    <StyledFooter>
+    <StyledFooter songData={songData.id}>
       <SongData />
       <div className="player-body">
         <ReactPlayer

@@ -106,7 +106,7 @@ const StyledSection = styled.section`
     }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 768px) {
     .banner {
       flex-direction: column;
       align-items: flex-start;

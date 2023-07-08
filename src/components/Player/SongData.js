@@ -16,7 +16,7 @@ const StyledControl = styled.div`
       height: 52px;
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 768px) {
       display: none;
     }
   }
@@ -42,7 +42,7 @@ const StyledControl = styled.div`
     }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 768px) {
     width: 20vw;
   }
 `;
