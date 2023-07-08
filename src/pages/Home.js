@@ -16,7 +16,7 @@ const Section = styled.section`
     margin-bottom: 16px;
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 768px) {
     h2 {
       font-size: 20px;
     }

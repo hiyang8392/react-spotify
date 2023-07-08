@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux";
-import Item from "../components/Item";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
+import Item from "../components/Item";
+import SearchInput from "../components/SearchInput";
 
 const StyledSearch = styled.div`
   color: #fff;
@@ -21,7 +23,7 @@ const StyledSearch = styled.div`
     margin: 10px 0;
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 768px) {
     h2 {
       font-size: 20px;
     }
@@ -34,6 +36,7 @@ const StyledSearch = styled.div`
 `;
 
 const Search = () => {
+  const location = useLocation();
   const searchState = useSelector((state) => state.search);
   const songs = searchState.songs;
   const albums = searchState.albums;
@@ -66,9 +69,10 @@ const Search = () => {
 
   return (
     <StyledSearch>
-      <h1>搜尋結果</h1>
+      {location.pathname === '/search' && <SearchInput />}
       {songs.length > 0 && (
         <>
+          <h1>搜尋結果</h1>
           <h2>歌曲</h2>
           <ul className="items">{songItems}</ul>
         </>

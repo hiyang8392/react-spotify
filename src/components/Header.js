@@ -1,7 +1,6 @@
-import { useHistory, useLocation } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import styled from "styled-components";
-import SearchInput from "./SearchInput";
 
 const StyledHeader = styled.div`
   position: sticky;
@@ -40,12 +39,14 @@ const StyledHeader = styled.div`
       }
     }
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Header = () => {
   const history = useHistory();
-  const location = useLocation();
-
   const handlePrevPage = () => {
     history.goBack();
   };
@@ -57,7 +58,6 @@ const Header = () => {
           <FaArrowLeft />
         </button>
       </div>
-      {location.pathname === '/search' && <SearchInput />}
     </StyledHeader>
   );
 };

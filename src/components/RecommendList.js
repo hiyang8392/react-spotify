@@ -8,7 +8,7 @@ const StyledRecommendList = styled.div`
     margin: 10px 0;
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 768px) {
     .items {
       flex-wrap: initial;
       overflow-x: scroll;

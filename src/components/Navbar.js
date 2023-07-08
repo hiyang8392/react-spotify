@@ -59,13 +59,23 @@ const Nav = styled.nav`
     min-height: 1px;
   }
 
-  @media (max-width: 500px) {
-    padding: 20px 5px;
+  @media (max-width: 768px) {
+    position: sticky;
+    padding: 10px 25px;
+    top: 0;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+    background-color: #121212;
+    border: none;
 
     ul {
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      justify-content: space-around;
+    }
+
+    .line {
+      display: none;
     }
 
     span,

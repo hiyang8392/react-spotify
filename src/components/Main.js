@@ -7,6 +7,11 @@ const StyledMain = styled.main`
   position: relative;
   float: right;
   width: 85%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    float: none;
+  }
 `;
 
 const StyledLayout = styled.div`

@@ -19,7 +19,7 @@ const StyledToast = styled.div`
 		visibility: visible;
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 768px) {
     left: calc(100vw - 75%);
   }
 `;
