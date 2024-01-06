@@ -1,7 +1,7 @@
 # React 音樂播放介面
 
 ### demo
-<a target="_blank" href="https://music.hihiyang.com/">https://music.hihiyang.com</a>
+<a target="_blank" href="https://music.yangisgood.com/">https://music.hihiyang.com</a>
 
 ![demo image](https://imgur.com/Qa4MHnR.jpg)
 
